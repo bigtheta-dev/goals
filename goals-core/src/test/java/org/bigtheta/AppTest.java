@@ -1,4 +1,4 @@
-package org.bigtheta.goals;
+package org.bigtheta;
 
 import static org.junit.Assert.assertTrue;
 

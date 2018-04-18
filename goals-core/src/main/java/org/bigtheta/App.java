@@ -1,4 +1,4 @@
-package org.bigtheta.goals;
+package org.bigtheta;
 
 /**
  * Hello world!
