@@ -7,10 +7,18 @@ import javax.ws.rs.core.MediaType;
 
 @Path("/")
 public class Endpoint {
+
     @GET
     @Path("test")
     @Produces(MediaType.TEXT_PLAIN)
     public String get() {
         return "result";
+    }
+
+    @GET
+    @Path("")
+    @Produces(MediaType.TEXT_PLAIN)
+    public String index() {
+        return "welcome!";
     }
 }
