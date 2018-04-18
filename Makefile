@@ -14,3 +14,7 @@ clear:
 prune: stop clear
 
 restart: prune build run
+
+push:
+	docker tag goals bigthetahub/goals
+	docker push bigthetahub/goals:latest
