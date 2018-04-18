@@ -1,0 +1,17 @@
+services:
+  - docker
+
+language: java
+
+jdk: oraclejdk8
+
+install: true
+
+before_script:
+  - echo "Starting build"
+
+script:
+  - mvn clean package
+
+after_success:
+  - sh deploy_dockerhub.sh
