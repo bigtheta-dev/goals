@@ -1,4 +1,7 @@
-package org.bigtheta.goals.core;
+package org.bigtheta.goals.repo;
+
+import org.bigtheta.goals.core.Task;
+import org.bigtheta.goals.core.TaskStatus;
 
 import java.util.ArrayList;
 import java.util.List;

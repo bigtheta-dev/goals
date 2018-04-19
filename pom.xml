@@ -11,6 +11,7 @@
     <modules>
         <module>goals-rest</module>
         <module>goals-core</module>
+        <module>goals-repo</module>
     </modules>
 
     <name>goals</name>

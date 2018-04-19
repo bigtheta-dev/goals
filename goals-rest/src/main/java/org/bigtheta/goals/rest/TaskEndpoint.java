@@ -1,6 +1,6 @@
 package org.bigtheta.goals.rest;
 
-import org.bigtheta.goals.core.Repo;
+import org.bigtheta.goals.repo.Repo;
 import org.bigtheta.goals.core.Task;
 
 import javax.ws.rs.*;

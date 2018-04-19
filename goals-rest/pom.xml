@@ -86,12 +86,13 @@
 
     <dependencies>
 
+
         <dependency>
             <groupId>org.bigtheta</groupId>
-            <artifactId>goals.core</artifactId>
-            <version> 1.0-SNAPSHOT</version>
+            <artifactId>goals.repo</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
-        
+
         
 
         <dependency>
