@@ -1,7 +1,7 @@
 package org.bigtheta.goals.rest;
 
 import org.bigtheta.goals.core.JsonConverter;
-import org.bigtheta.goals.repo.Repo;
+import org.bigtheta.goals.repo.InMemoryRepo;
 import org.bigtheta.goals.core.Task;
 
 import javax.ws.rs.*;
@@ -14,21 +14,21 @@ public class TaskEndpoint {
     @Path("")
     @Produces(MediaType.APPLICATION_JSON)
     public String list() {
-        return new JsonConverter().marchall(new Repo().list());
+        return new JsonConverter().marchall(new InMemoryRepo().list());
     }
 
     @GET
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public String read(@PathParam("id") String id) {
-        return new JsonConverter().marchall(new Repo().read(id));
+        return new JsonConverter().marchall(new InMemoryRepo().read(id));
     }
 
     @DELETE
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public String delete(@PathParam("id") String id) {
-        return new JsonConverter().marchall(new Repo().delete(id));
+        return new JsonConverter().marchall(new InMemoryRepo().delete(id));
     }
 
     @POST
@@ -37,7 +37,7 @@ public class TaskEndpoint {
     @Produces(MediaType.APPLICATION_JSON)
     public String create(String input) {
         Task task = new JsonConverter().unmarchall(input);
-        return new JsonConverter().marchall(new Repo().create(task));
+        return new JsonConverter().marchall(new InMemoryRepo().create(task));
     }
 
     @PUT
@@ -46,7 +46,7 @@ public class TaskEndpoint {
     @Produces(MediaType.APPLICATION_JSON)
     public String update(String input) {
         Task task = new JsonConverter().unmarchall(input);
-        return new JsonConverter().marchall(new Repo().update(task));
+        return new JsonConverter().marchall(new InMemoryRepo().update(task));
     }
 
 }
