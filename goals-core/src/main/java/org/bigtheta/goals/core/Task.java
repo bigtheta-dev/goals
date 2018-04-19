@@ -27,10 +27,7 @@ public class Task {
 
     @Override
     public String toString() {
-        return "Task{" +
-                "id='" + id + '\'' +
-                ", value='" + value + '\'' +
-                '}';
+        return id + ":\t" + value;
     }
 
     public String getId() {

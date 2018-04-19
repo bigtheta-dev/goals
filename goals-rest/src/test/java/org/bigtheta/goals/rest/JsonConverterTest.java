@@ -1,5 +1,6 @@
 package org.bigtheta.goals.rest;
 
+import org.bigtheta.goals.core.JsonConverter;
 import org.bigtheta.goals.core.Task;
 import org.junit.jupiter.api.Test;
 

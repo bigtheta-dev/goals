@@ -1,5 +1,6 @@
 package org.bigtheta.goals.rest;
 
+import org.bigtheta.goals.core.JsonConverter;
 import org.bigtheta.goals.repo.Repo;
 import org.bigtheta.goals.core.Task;
 

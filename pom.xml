@@ -12,6 +12,7 @@
         <module>goals-rest</module>
         <module>goals-core</module>
         <module>goals-repo</module>
+        <module>goals-cli</module>
     </modules>
 
     <name>goals</name>

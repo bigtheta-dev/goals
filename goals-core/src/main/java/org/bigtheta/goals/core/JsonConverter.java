@@ -1,8 +1,8 @@
-package org.bigtheta.goals.rest;
+package org.bigtheta.goals.core;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.bigtheta.goals.core.Task;
 
 import java.io.IOException;
 import java.util.List;
@@ -32,6 +32,15 @@ public class JsonConverter {
         ObjectMapper mapper = new ObjectMapper();
         try {
             return mapper.readerFor(Task.class).readValue(input);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public List<Task> unmarchallList(String input) {
+        ObjectMapper mapper = new ObjectMapper();
+        try {
+            return mapper.readValue(input, new TypeReference<List<Task>>() { });
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
