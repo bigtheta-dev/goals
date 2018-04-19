@@ -48,7 +48,7 @@ public class Repo {
         Task read = read(task.getId());
         read.setValue(task.getValue());
 
-        return task;
+        return read;
     }
 
     public Task delete(String id) {

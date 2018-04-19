@@ -1,0 +1,28 @@
+### list
+GET http://localhost:8080/api/task/
+
+### read
+GET http://localhost:8080/api/task/2
+
+### delete
+DELETE http://localhost:8080/api/task/1
+
+### create
+POST http://localhost:8080/api/task/
+Content-Type: application/json
+
+{
+  "value": "brand new"
+}
+
+### update
+PUT http://localhost:8080/api/task/
+Content-Type: application/json
+
+{
+    "id":"2",
+    "value": "blah balh sfdvdf"
+}
+
+###
+
