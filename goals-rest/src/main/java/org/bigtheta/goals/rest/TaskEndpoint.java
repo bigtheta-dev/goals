@@ -1,33 +1,51 @@
 package org.bigtheta.goals.rest;
 
-import org.bigtheta.goals.core.Processor;
+import org.bigtheta.goals.core.Repo;
+import org.bigtheta.goals.core.Task;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 
 @Path("/api/task")
 public class TaskEndpoint {
 
     @GET
-    @Path("list")
+    @Path("")
     @Produces(MediaType.APPLICATION_JSON)
     public String list() {
-        return new JsonConverter().marchall(new Processor().list());
+        return new JsonConverter().marchall(new Repo().list());
     }
 
     @GET
-    @Path("fst")
+    @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)
-    public String fst() {
-        return new JsonConverter().marchall(new Processor().fst());
+    public String read(@PathParam("id") String id) {
+        return new JsonConverter().marchall(new Repo().read(id));
     }
 
-    @GET
-    @Path("")
-    @Produces(MediaType.TEXT_PLAIN)
-    public String index() {
-        return "welcome!";
+    @DELETE
+    @Path("/{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public String delete(@PathParam("id") String id) {
+        return new JsonConverter().marchall(new Repo().delete(id));
     }
+
+    @POST
+    @Path("")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public String create(String input) {
+        Task task = new JsonConverter().unmarchall(input);
+        return new JsonConverter().marchall(new Repo().create(task));
+    }
+
+    @PUT
+    @Path("")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public String update(String input) {
+        Task task = new JsonConverter().unmarchall(input);
+        return new JsonConverter().marchall(new Repo().update(task));
+    }
+
 }
