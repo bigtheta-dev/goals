@@ -39,6 +39,12 @@ public class Processor {
             }
 
             switch (args[0]) {
+                case "help":
+                    return "list - show all goals\n" +
+                            "delete {id} - delete goal with id\n" +
+                            "read {id} - read goal with id\n" +
+                            "create {value} - create goal with value\n" +
+                            "update {id} {value} - update goal value";
                 case "list":
                     if (args.length != 1) {
                         throw new IllegalArgumentException();
@@ -92,6 +98,7 @@ public class Processor {
 
         String listResponseJson = IOUtils.toString(listResponse.getEntity().getContent(), UTF_8.name());
         List<Task> tasks = jsonConverter.unmarchallList(listResponseJson);
+        System.out.println("id\tvalue");
         return tasks.stream().map(Task::toString).collect(Collectors.joining("\n"));
     }
 

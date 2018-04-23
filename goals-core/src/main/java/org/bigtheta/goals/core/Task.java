@@ -16,6 +16,11 @@ public class Task {
         this.status = TaskStatus.ACTIVE;
     }
 
+    public Task(String id, String value, TaskStatus status) {
+        this.id = id;
+        this.value = value;
+        this.status = status;
+    }
     public Task(String value) {
         this.value = value;
         this.status = TaskStatus.ACTIVE;
@@ -27,7 +32,7 @@ public class Task {
 
     @Override
     public String toString() {
-        return id + ":\t" + value;
+        return id + "\t" + value;
     }
 
     public String getId() {

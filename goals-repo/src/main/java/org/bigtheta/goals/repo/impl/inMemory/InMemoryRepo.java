@@ -1,7 +1,8 @@
-package org.bigtheta.goals.repo;
+package org.bigtheta.goals.repo.impl.inMemory;
 
 import org.bigtheta.goals.core.Task;
 import org.bigtheta.goals.core.TaskStatus;
+import org.bigtheta.goals.repo.Repo;
 
 import java.util.ArrayList;
 import java.util.List;
