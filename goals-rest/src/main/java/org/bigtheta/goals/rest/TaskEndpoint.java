@@ -18,6 +18,21 @@ public class TaskEndpoint {
         repo = new PgRepo();
     }
 
+    @OPTIONS
+    @Path("")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response opt1() {
+        return buildResponse("");
+    }
+
+    @OPTIONS
+    @Path("/{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response opt2() {
+        return buildResponse("");
+    }
+
+
     @GET
     @Path("")
     @Produces(MediaType.APPLICATION_JSON)
