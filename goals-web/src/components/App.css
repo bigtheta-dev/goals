@@ -1,0 +1,21 @@
+.App {
+    width: 100%;
+}
+
+.flex-container {
+    width: 100%;
+    min-height: 550px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+
+}
+
+.item {
+    padding: 1px;
+}
+
+.btn {
+    width: 100px;
+}

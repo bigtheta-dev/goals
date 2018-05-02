@@ -1,0 +1,14 @@
+version: '3'
+services:
+    react:
+        image: bigthetahub/react
+        ports:
+         - "3000:3000"
+    web:
+        image: bigthetahub/web
+        ports:
+         - "8080:8080"
+    db:
+        image: bigthetahub/db
+        ports:
+         - "5432:5432"

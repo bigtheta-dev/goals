@@ -1,0 +1,20 @@
+.form-container {
+    display: flex;
+    flex-flow: row nowrap;
+    padding:1px;
+}
+.Forms{
+    padding-top:15px;
+    padding-bottom:5px;
+    background-color: #EFEFEF;
+}
+
+.form-item-button {
+    width: 100px;
+}
+
+.form-item-input {
+    flex-grow: 1;
+    width: 100px;
+}
+

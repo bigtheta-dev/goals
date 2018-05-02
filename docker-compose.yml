@@ -1,10 +1,17 @@
 version: '3'
 services:
+    react:
+        build: ./goals-web/
+        ports:
+         - "3000:3000"
+        image: bigthetahub/react
     web:
         build: .
         ports:
          - "8080:8080"
+        image: bigthetahub/web
     db:
         build: ./goals-repo/docker/
         ports:
          - "5432:5432"
+        image: bigthetahub/db

@@ -1,0 +1,33 @@
+
+.task {
+    background-color: #EFFFEF;
+    display: flex;
+    flex-direction: row;
+}
+
+.taskId {
+    color: gray;
+    min-width: 30px;
+    font-size: 8pt;
+    align-self: flex-end;
+}
+
+.taskValue {
+    text-align: justify;
+    align-self: flex-end;
+    flex-grow: 1;
+}
+
+.taskStatus {
+    color: gray;
+    text-align: center;
+    min-width: 60px;
+    font-size: 8pt;
+    align-self: flex-start;
+}
+
+.taskButton {
+    min-width: 100px;
+    align-self: flex-end;
+}
+
