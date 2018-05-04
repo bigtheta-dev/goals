@@ -9,7 +9,7 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-@Path("/api/task")
+@Path("/task")
 public class TaskEndpoint {
 
     private final Repo repo;

@@ -23,16 +23,20 @@ class TaskForm extends Component {
 
     handleCreate = (event) => {
         event.preventDefault();
-        axios.post(`http://web:8080/api/task`, {
+        axios.post(`http://139.59.208.233/api/task`, {
                 'value': `${this.state.task}`
             },
         ).then(ignore =>
-            axios.get(`http://web:8080/api/task/`)
+            axios.get(`http://139.59.208.233/api/task/`)
                 .then(resp => {
                     this.props.updateTasks(resp.data);
                     this.setState({task: ''});
-                })
-        );
+                }).catch(function (error) {
+                console.log(error);
+            })
+        ).catch(function (error) {
+            console.log(error);
+        });
 
     };
 

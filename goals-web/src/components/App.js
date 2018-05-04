@@ -13,11 +13,14 @@ class App extends Component {
     };
 
     componentDidMount() {
-        axios.get(`http://web:8080/api/task/`)
+        axios.get(`http://139.59.208.233/api/task/`)
             .then(resp => {
                 this.setState(() => ({
                     tasks: resp.data
                 }));
+            })
+            .catch(function (error) {
+                console.log(error);
             });
     }
 

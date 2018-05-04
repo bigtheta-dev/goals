@@ -8,7 +8,10 @@ class Task extends Component {
         display: 'block'
     };
     handleClick = () => {
-        axios.delete(`http://web:8080/api/task/${this.props.id}`);
+        axios.delete(`http://139.59.208.233/api/task/${this.props.id}`)
+            .catch(function (error) {
+                console.log(error);
+            });
         this.setState({display: 'none'});
         console.log(this.props.id);
     };
